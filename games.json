@@ -10,6 +10,14 @@
       "tags": ["テンプレート", "PWA", "制作向け"]
     },
     {
+      "id": "action-game",
+      "title": "Action Game",
+      "description": "十字キーと丸ボタンで遊ぶ、マリオ風のアクションゲームです。",
+      "pageUrl": "games/action-game/index.html",
+      "icon": "games/action-game/icon.svg",
+      "tags": ["アクション", "プラットフォーム", "PWA"]
+    },
+    {
       "id": "tap-game",
       "title": "Tap Game",
       "description": "丸をタップしてスコアを稼ぐシンプルゲームです。",

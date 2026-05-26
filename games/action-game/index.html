@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Action Game - GameMarket</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff3b30">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body class="game-page">
+  <main>
+    <section class="game-card action-game-card">
+      <div class="action-game-screen">
+        <div class="screen-window">
+          <div id="gameCanvas" class="game-canvas"></div>
+          <div class="hud">
+            <span id="score">Score: 0</span>
+            <span id="lives">Lives: 3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-controls">
+        <div class="control-block dpad" aria-label="十字キー">
+          <button id="upButton" class="dpad-button">▲</button>
+          <button id="leftButton" class="dpad-button">◀</button>
+          <button id="downButton" class="dpad-button">▼</button>
+          <button id="rightButton" class="dpad-button">▶</button>
+        </div>
+        <div class="control-block action-block">
+          <button id="jumpButton" class="round-button">A</button>
+          <div class="control-label">ジャンプ</div>
+        </div>
+      </div>
+
+      <div class="game-action-copy">
+        <p>上の画面がプレイエリアです。十字キーで左右移動・しゃがみ、丸ボタンでジャンプします。</p>
+      </div>
+
+      <button id="installButton" class="install-button">ダウンロード</button>
+      <div id="instructions" class="instructions" hidden></div>
+      <button id="restartButton" class="button" hidden>もう一度遊ぶ</button>
+    </section>
+
+    <section class="game-info">
+      <h1>Action Game</h1>
+      <p>GameBoy風の上下レイアウトで遊べるミニアクションです。キー操作は画面下部にまとめてあります。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../../">← マーケットへ戻る</a></p>
+  </footer>
+
+  <script src="install.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

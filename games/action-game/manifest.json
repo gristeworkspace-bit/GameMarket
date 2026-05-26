@@ -1,0 +1,16 @@
+{
+  "name": "Action Game",
+  "short_name": "Action",
+  "description": "十字キーと丸ボタンで遊ぶ、マリオ風のアクションゲームです。",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff3b30",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ]
+}
