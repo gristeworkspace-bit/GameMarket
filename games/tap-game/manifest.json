@@ -1,0 +1,16 @@
+{
+  "name": "Tap Game",
+  "short_name": "TapGame",
+  "description": "丸をタップして遊ぶシンプルな PWA ゲームです。",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#34c759",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ]
+}

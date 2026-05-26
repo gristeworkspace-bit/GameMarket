@@ -7,6 +7,14 @@
       "pageUrl": "games/sample-game/index.html",
       "icon": "games/sample-game/icon.svg",
       "tags": ["サンプル", "PWA", "ゲーム"]
+    },
+    {
+      "id": "tap-game",
+      "title": "Tap Game",
+      "description": "丸をタップしてスコアを稼ぐシンプルゲームです。",
+      "pageUrl": "games/tap-game/index.html",
+      "icon": "games/tap-game/icon.svg",
+      "tags": ["シンプル", "アクション", "PWA"]
     }
   ]
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tap Game - GameMarket</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#34c759">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <header>
+    <h1>Tap Game</h1>
+    <p>表示される丸をタップしてスコアを稼ぐシンプルゲームです。</p>
+  </header>
+
+  <main>
+    <section class="game-card">
+      <div class="tap-game-panel">
+        <div class="tap-game-info">
+          <span id="score">Score: 0</span>
+          <span id="timer">Time: 15</span>
+        </div>
+        <div id="target" class="tap-target">Tap!</div>
+        <button id="restartButton" class="button" hidden>もう一度遊ぶ</button>
+      </div>
+      <button id="installButton" class="install-button">ダウンロード</button>
+      <div id="instructions" class="instructions" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../">← マーケットへ戻る</a></p>
+  </footer>
+
+  <script src="install.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
