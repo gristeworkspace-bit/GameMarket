@@ -20,24 +20,22 @@
             <span id="score">Score: 0</span>
             <span id="lives">Lives: 3</span>
           </div>
-        </div>
-      </div>
-
-      <div class="action-controls">
-        <div class="control-block dpad" aria-label="十字キー">
-          <button id="upButton" class="dpad-button">▲</button>
-          <button id="leftButton" class="dpad-button">◀</button>
-          <button id="downButton" class="dpad-button">▼</button>
-          <button id="rightButton" class="dpad-button">▶</button>
-        </div>
-        <div class="control-block action-block">
-          <button id="jumpButton" class="round-button">A</button>
-          <div class="control-label">ジャンプ</div>
+          <div class="action-overlay">
+            <div class="left-control" aria-label="移動ボタン">
+              <button id="upButton" class="circle-button small-button">▲</button>
+              <button id="leftButton" class="circle-button small-button">◀</button>
+              <button id="downButton" class="circle-button small-button">▼</button>
+              <button id="rightButton" class="circle-button small-button">▶</button>
+            </div>
+            <div class="right-control" aria-label="アクションボタン">
+              <button id="jumpButton" class="circle-button large-button">A</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="game-action-copy">
-        <p>上の画面がプレイエリアです。十字キーで左右移動・しゃがみ、丸ボタンでジャンプします。</p>
+        <p>左下の円形ボタンで移動し、右下の丸ボタンでジャンプします。画面内から手を離さずに操作できます。</p>
       </div>
 
       <button id="installButton" class="install-button">ダウンロード</button>
