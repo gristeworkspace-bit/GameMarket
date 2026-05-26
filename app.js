@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gameList = document.getElementById('gameList');
 
-  fetch('/games.json')
+  fetch('games.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('ゲーム一覧の読み込みに失敗しました');

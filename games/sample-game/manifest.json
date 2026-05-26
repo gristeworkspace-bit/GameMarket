@@ -8,7 +8,7 @@
   "theme_color": "#1f8efa",
   "icons": [
     {
-      "src": "/games/sample-game/icon.svg",
+      "src": "icon.svg",
       "type": "image/svg+xml",
       "sizes": "192x192 512x512"
     }

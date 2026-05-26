@@ -61,6 +61,6 @@ if (isIos()) {
 }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/games/sample-game/service-worker.js')
+  navigator.serviceWorker.register('service-worker.js')
     .catch(err => console.warn('ServiceWorker registration failed:', err));
 }
