@@ -7,12 +7,14 @@
 - `index.html` - マーケットのトップページ
 - `styles.css` - 共通スタイル
 - `app.js` - マーケット用 JavaScript（今後拡張用）
-- `games/sample-game/` - サンプルゲーム PWA
-  - `index.html` - ゲームページ
+- `games/game-template/` - 制作者向け PWA テンプレート
+  - `index.html` - テンプレートページ
   - `manifest.json` - PWA マニフェスト
   - `service-worker.js` - 簡易サービスワーカー
   - `install.js` - インストールボタン挙動
   - `icon.svg` - アイコン
+  - `README.md` - 制作者向け説明
+  - `rules.txt` - ルールテンプレート
 
 ## 使い方
 

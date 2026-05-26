@@ -1,0 +1,16 @@
+{
+  "name": "Game Template",
+  "short_name": "GameTemplate",
+  "description": "ゲーム制作者向けの PWA テンプレートです。公開前の基本構成とルールを含みます。",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f8efa",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ]
+}

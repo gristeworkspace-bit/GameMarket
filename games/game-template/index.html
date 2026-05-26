@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Game Template - GameMarket</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1f8efa">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body class="game-page">
+  <main>
+    <section class="game-card">
+      <p>このページはゲーム制作者向けの PWA テンプレートです。公開前の基本構成を確認できます。</p>
+      <p><a class="button" href="rules.txt" download>ルール一式をダウンロード</a></p>
+      <button id="installButton" class="install-button">ダウンロード</button>
+      <div id="instructions" class="instructions" hidden></div>
+    </section>
+
+    <section class="game-info">
+      <h1>Game Template</h1>
+      <p>ここからゲーム名・説明・アイコン・ルールを差し替えて、オリジナルタイトルを公開できます。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../../">← マーケットへ戻る</a></p>
+  </footer>
+
+  <script src="install.js"></script>
+</body>
+</html>
