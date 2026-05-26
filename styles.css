@@ -133,6 +133,16 @@ main {
   height: 520px;
 }
 
+.player {
+  position: absolute;
+  width: 34px;
+  height: 44px;
+  background: linear-gradient(180deg, #fffbfe 0%, #ffad40 100%);
+  border: 3px solid #3a1f0f;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35), 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
 .action-overlay {
   position: absolute;
   inset: 0;
