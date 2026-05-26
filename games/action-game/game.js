@@ -2,6 +2,7 @@ const gameCanvas = document.getElementById('gameCanvas');
 const scoreText = document.getElementById('score');
 const livesText = document.getElementById('lives');
 const restartButton = document.getElementById('restartButton');
+let world = null;
 const controls = {
   left: false,
   right: false,
@@ -12,13 +13,15 @@ let score = 0;
 let lives = 3;
 let gameOver = false;
 let player = null;
-let playerState = { x: 50, y: 0, vx: 0, vy: 0, grounded: false };
+let playerState = { x: 50, y: 280, vx: 0, vy: 0, grounded: false };
 let platforms = [];
 let coins = [];
 let animationFrame = null;
 
-const screenWidth = 340;
-const screenHeight = 500;
+const viewWidth = 340;
+const viewHeight = 500;
+const worldWidth = 700;
+const worldHeight = 520;
 const gravity = 0.7;
 const speed = 3.5;
 const jumpPower = -13;
@@ -30,19 +33,23 @@ function createEntity(className, x, y, width, height) {
   element.style.height = `${height}px`;
   element.style.left = `${x}px`;
   element.style.top = `${y}px`;
-  gameCanvas.appendChild(element);
+  world.appendChild(element);
   return element;
 }
 
 function setupScene() {
-  gameCanvas.innerHTML = '';
+  gameCanvas.innerHTML = '<div id="world" class="world"></div>';
+  world = document.getElementById('world');
+  world.style.width = `${worldWidth}px`;
+  world.style.height = `${worldHeight}px`;
 
-  player = createEntity('player', playerState.x, playerState.y, 34, 44);
   playerState.x = 50;
   playerState.y = 280;
   playerState.vx = 0;
   playerState.vy = 0;
   playerState.grounded = false;
+
+  player = createEntity('player', playerState.x, playerState.y, 34, 44);
 
   const level = [
     { x: 0, y: 438, w: 340, h: 28 },
@@ -103,6 +110,13 @@ function collectCoins() {
   });
 }
 
+function updateCamera() {
+  if (!world) return;
+  const targetX = clamp(playerState.x + 17 - viewWidth / 2, 0, worldWidth - viewWidth);
+  const targetY = clamp(playerState.y + 22 - viewHeight / 2, 0, worldHeight - viewHeight);
+  world.style.transform = `translate(${-targetX}px, ${-targetY}px)`;
+}
+
 function applyPhysics() {
   if (gameOver) return;
 
@@ -117,9 +131,9 @@ function applyPhysics() {
   playerState.vy += gravity;
   playerState.x += playerState.vx;
   playerState.y += playerState.vy;
-  playerState.x = clamp(playerState.x, 0, screenWidth - 34);
+  playerState.x = clamp(playerState.x, 0, worldWidth - 34);
 
-  if (playerState.y > screenHeight - 44) {
+  if (playerState.y > worldHeight - 44) {
     loseLife();
     return;
   }
@@ -147,6 +161,7 @@ function applyPhysics() {
   player.style.left = `${playerState.x}px`;
   player.style.top = `${playerState.y}px`;
   collectCoins();
+  updateCamera();
 }
 
 function loseLife() {
