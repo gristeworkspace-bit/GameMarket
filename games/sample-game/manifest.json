@@ -1,0 +1,16 @@
+{
+  "name": "Sample Game",
+  "short_name": "SampleGame",
+  "description": "GameMarket で配信する PWA サンプルゲームです。",
+  "start_url": "/games/sample-game/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f8efa",
+  "icons": [
+    {
+      "src": "/games/sample-game/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ]
+}

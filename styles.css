@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  color: #202124;
+}
+
+header {
+  background: #1f8efa;
+  color: white;
+  padding: 2rem 1.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.game-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.game-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(33, 33, 33, 0.08);
+  padding: 1.5rem;
+}
+
+.game-card h2 {
+  margin-top: 0;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background: #1f8efa;
+  color: white;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+}
+
+.install-button {
+  display: inline-block;
+  background: #34c759;
+  color: white;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.instructions {
+  background: #fff8e5;
+  border: 1px solid #ffe3a1;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer {
+  max-width: 960px;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem;
+  color: #5f6368;
+}
+
+.game-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.game-tags {
+  margin-top: 0.75rem;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.loading,
+.error {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 18px rgba(33, 33, 33, 0.08);
+}
+
+.error {
+  border: 1px solid #f2b7b7;
+  color: #7b1616;
+}

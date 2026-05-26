@@ -1,0 +1,12 @@
+{
+  "games": [
+    {
+      "id": "sample-game",
+      "title": "Sample Game",
+      "description": "PWA として公開するサンプルゲームです。ホーム画面に追加して遊べます。",
+      "pageUrl": "/games/sample-game/index.html",
+      "icon": "/games/sample-game/icon.svg",
+      "tags": ["サンプル", "PWA", "ゲーム"]
+    }
+  ]
+}

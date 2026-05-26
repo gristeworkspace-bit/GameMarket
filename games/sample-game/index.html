@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sample Game - GameMarket</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="manifest" href="/games/sample-game/manifest.json">
+  <meta name="theme-color" content="#1f8efa">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <header>
+    <h1>Sample Game</h1>
+    <p>このページで PWA をホーム画面に追加できます。</p>
+  </header>
+
+  <main>
+    <section class="game-card">
+      <p>このゲームは PWA として公開されています。以下のボタンを押すと、Android ではインストールプロンプト、iOS ではホーム画面追加の手順が表示されます。</p>
+      <button id="installButton" class="install-button">ダウンロード</button>
+      <div id="instructions" class="instructions" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="/">← マーケットへ戻る</a></p>
+  </footer>
+
+  <script src="/games/sample-game/install.js"></script>
+</body>
+</html>
