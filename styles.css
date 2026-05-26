@@ -22,6 +22,27 @@ header {
   overflow: hidden;
 }
 
+body.game-page header {
+  background: none;
+  color: #202124;
+  aspect-ratio: auto;
+  min-height: auto;
+  padding: 2rem 1.5rem;
+  display: block;
+}
+
+body.game-page header h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 0.5rem;
+}
+
+body.game-page header p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .header-brand {
   position: absolute;
   top: 1rem;
