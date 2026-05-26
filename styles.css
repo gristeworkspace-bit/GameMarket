@@ -11,51 +11,51 @@ body {
 
 header {
   position: relative;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+  max-width: 100vw;
   padding: 0;
   color: white;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('siteimage/GameMarketHeader.png') no-repeat center center;
+  background: url('siteimage/GameMarketHeader.png') no-repeat center top;
   background-size: cover;
   overflow: hidden;
 }
 
-.header-overlay {
+.header-brand {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
-}
-
-.hero-content {
-  position: relative;
+  top: 1rem;
+  left: 1rem;
   z-index: 1;
-  max-width: 960px;
-  width: 100%;
-  padding: 2rem 1.5rem;
-  text-align: center;
 }
 
-.hero-content h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  line-height: 1.05;
-}
-
-.hero-content p {
+.header-brand h1 {
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 main {
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 160px;
+    background-position: top center;
+  }
+
+  .header-brand {
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+
+  .header-brand h1 {
+    font-size: 1rem;
+  }
 }
 
 .game-list {
