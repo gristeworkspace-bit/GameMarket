@@ -24,11 +24,14 @@
       "pageUrl": "games/tap-game/index.html",
       "icon": "games/tap-game/icon.svg",
       "tags": ["シンプル", "アクション", "PWA"]
-      "title": "Tap Game",
-      "description": "丸をタップしてスコアを稼ぐシンプルゲームです。",
-      "pageUrl": "games/tap-game/index.html",
-      "icon": "games/tap-game/icon.svg",
-      "tags": ["シンプル", "アクション", "PWA"]
+    },
+    {
+      "id": "ori-game",
+      "title": "OriGame",
+      "description": "Unity WebGL で公開された OriProject のゲームです。",
+      "pageUrl": "games/ori-game/index.html",
+      "icon": "games/ori-game/icon.svg",
+      "tags": ["Unity", "WebGL", "Adventure"]
     }
   ]
 }
