@@ -133,41 +133,6 @@ main {
   height: 520px;
 }
 
-.unity-wrapper {
-  width: 100%;
-  min-height: 360px;
-  margin: 1rem 0;
-  background: #000;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.unity-container {
-  width: 100%;
-  min-height: 360px;
-  background: #111;
-  position: relative;
-}
-
-.unity-loading,
-.unity-error {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.unity-error {
-  background: rgba(0, 0, 0, 0.72);
-}
-
 .player {
   position: absolute;
   width: 34px;
