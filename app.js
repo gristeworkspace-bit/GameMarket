@@ -28,20 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('article');
       card.className = 'game-card';
 
+      const cardContent = document.createElement('div');
+      cardContent.className = 'game-card-content';
+
+      if (game.icon) {
+        const icon = document.createElement('img');
+        icon.className = 'game-icon';
+        icon.src = game.icon;
+        icon.alt = `${game.title} のアイコン`;
+        cardContent.appendChild(icon);
+      }
+
+      const textWrapper = document.createElement('div');
+      textWrapper.className = 'game-card-text';
+
       const title = document.createElement('h2');
       title.textContent = game.title;
-      card.appendChild(title);
+      textWrapper.appendChild(title);
 
       const description = document.createElement('p');
       description.textContent = game.description;
-      card.appendChild(description);
+      textWrapper.appendChild(description);
 
       if (game.tags && game.tags.length) {
         const tagList = document.createElement('div');
         tagList.className = 'game-tags';
         tagList.textContent = game.tags.join(' · ');
-        card.appendChild(tagList);
+        textWrapper.appendChild(tagList);
       }
+
+      cardContent.appendChild(textWrapper);
+      card.appendChild(cardContent);
 
       const buttonContainer = document.createElement('div');
       buttonContainer.className = 'buttons';
@@ -51,14 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link.href = game.pageUrl;
       link.textContent = 'ゲームページへ';
       buttonContainer.appendChild(link);
-
-      if (game.icon) {
-        const icon = document.createElement('img');
-        icon.className = 'game-icon';
-        icon.src = game.icon;
-        icon.alt = `${game.title} のアイコン`;
-        card.insertBefore(icon, title);
-      }
 
       card.appendChild(buttonContainer);
       gameList.appendChild(card);

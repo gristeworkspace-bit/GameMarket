@@ -97,6 +97,16 @@ main {
   padding: 1.5rem;
 }
 
+.game-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.game-card-text {
+  min-width: 0;
+}
+
 .action-game-card {
   padding: 1rem;
 }
@@ -409,8 +419,9 @@ footer {
   width: 64px;
   height: 64px;
   border-radius: 18px;
-  margin-bottom: 1rem;
+  margin: 0;
   display: block;
+  flex-shrink: 0;
 }
 
 .game-tags {
