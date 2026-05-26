@@ -211,7 +211,7 @@ function handlePointer(button, active) {
   controls[button] = active;
 }
 
-['leftButton','rightButton','upButton','downButton','jumpButton'].forEach(id => {
+['leftButton','rightButton','jumpButton'].forEach(id => {
   const button = document.getElementById(id);
   const control = id.replace('Button', '').toLowerCase();
   button.addEventListener('pointerdown', () => handlePointer(control, true));
