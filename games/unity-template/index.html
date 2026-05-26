@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Unity WebGL Template - GameMarket</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#202124">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body class="game-page">
+  <main>
+    <section class="game-card">
+      <h1>Unity WebGL ゲーム公開テンプレート</h1>
+      <div class="unity-wrapper">
+        <div id="unityContainer" class="unity-container">
+          <div id="unityLoading" class="unity-loading">Unity WebGL ビルドを読み込み中…</div>
+        </div>
+      </div>
+      <div id="unityError" class="unity-error" hidden>
+        Unity WebGL ビルドが見つかりませんでした。<br>
+        `Build/<ProjectName>.loader.js` を `games/unity-template/Build/` に配置してください。
+      </div>
+      <div class="game-action-copy">
+        <p>Unity の WebGL ビルドをこのフォルダに置くと、GameMarket 上で公開できます。</p>
+      </div>
+      <button id="installButton" class="install-button">ダウンロード</button>
+      <div id="instructions" class="instructions" hidden></div>
+    </section>
+
+    <section class="game-info">
+      <p>Unity の WebGL ビルドを公開するには、Unity のビルド設定で WebGL を選び、生成された `Build/` と `TemplateData/` をこのフォルダにコピーしてください。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../../">← マーケットへ戻る</a></p>
+  </footer>
+
+  <script src="install.js"></script>
+  <script>
+    const projectName = 'UnityGame';
+    const buildUrl = 'Build';
+    const loaderUrl = `${buildUrl}/${projectName}.loader.js`;
+    const unityContainer = document.getElementById('unityContainer');
+    const unityError = document.getElementById('unityError');
+    const unityLoading = document.getElementById('unityLoading');
+
+    function unityShowBanner(msg, type) {
+      if (!unityLoading) return;
+      unityLoading.textContent = msg;
+      if (type === 'error') {
+        unityLoading.style.color = '#ffb3b3';
+      }
+    }
+
+    function showUnityError(message) {
+      unityLoading.hidden = true;
+      unityError.hidden = false;
+      unityError.textContent = message;
+    }
+
+    async function loadUnity() {
+      try {
+        await fetch(loaderUrl, { method: 'HEAD' });
+      } catch (e) {
+        showUnityError('Unity WebGL のビルドファイルが見つかりません。Build フォルダと loader ファイルを配置してください。');
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = loaderUrl;
+      script.onload = () => {
+        if (typeof createUnityInstance !== 'function') {
+          showUnityError('Unity ローダースクリプトを読み込めませんでした。ファイル名を確認してください。');
+          return;
+        }
+
+        createUnityInstance(unityContainer, {
+          dataUrl: `${buildUrl}/${projectName}.data.unityweb`,
+          frameworkUrl: `${buildUrl}/${projectName}.framework.js.unityweb`,
+          codeUrl: `${buildUrl}/${projectName}.wasm.unityweb`,
+          streamingAssetsUrl: 'StreamingAssets',
+          companyName: 'MyCompany',
+          productName: projectName,
+          productVersion: '1.0',
+          showBanner: unityShowBanner,
+        }).then(() => {
+          unityLoading.hidden = true;
+        }).catch(err => {
+          console.error(err);
+          showUnityError('Unity の読み込み中にエラーが発生しました。');
+        });
+      };
+      script.onerror = () => showUnityError('Unity ローダースクリプトの読み込みに失敗しました。');
+      document.body.appendChild(script);
+    }
+
+    loadUnity();
+  </script>
+</body>
+</html>

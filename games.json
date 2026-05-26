@@ -18,6 +18,14 @@
       "tags": ["アクション", "プラットフォーム", "PWA"]
     },
     {
+      "id": "unity-template",
+      "title": "Unity WebGL Template",
+      "description": "Unity の WebGL ビルドを公開するためのテンプレートです。",
+      "pageUrl": "games/unity-template/index.html",
+      "icon": "games/unity-template/icon.svg",
+      "tags": ["Unity", "WebGL", "テンプレート"]
+    },
+    {
       "id": "tap-game",
       "title": "Tap Game",
       "description": "丸をタップしてスコアを稼ぐシンプルゲームです。",

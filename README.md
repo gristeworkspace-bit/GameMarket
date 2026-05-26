@@ -15,6 +15,17 @@
   - `icon.svg` - アイコン
   - `README.md` - 制作者向け説明
   - `rules.txt` - ルールテンプレート
+- `games/unity-template/` - Unity WebGL 公開テンプレート
+  - `index.html` - Unity WebGL ゲームの公開ページ
+  - `manifest.json` - PWA マニフェスト
+  - `service-worker.js` - 簡易サービスワーカー
+  - `install.js` - インストールボタン挙動
+  - `icon.svg` - アイコン
+  - `README.md` - Unity WebGL ビルド手順
+
+## Unity WebGL の追加
+
+Unity で作成したゲームを公開する場合、WebGL ビルドを `games/unity-template/Build/` と `games/unity-template/TemplateData/` に配置し、`games/unity-template/index.html` の `projectName` をビルド名に合わせます。
 
 ## 使い方
 
