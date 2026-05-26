@@ -10,13 +10,46 @@ body {
 }
 
 header {
-  background: #1f8efa;
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   color: white;
-  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('siteimage/GameMarketHeader.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-header h1 {
-  margin: 0 0 0.5rem;
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
