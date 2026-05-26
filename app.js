@@ -52,6 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
       link.textContent = 'ゲームページへ';
       buttonContainer.appendChild(link);
 
+      if (game.downloadUrl) {
+        const downloadLink = document.createElement('a');
+        downloadLink.className = 'button secondary-button';
+        downloadLink.href = game.downloadUrl;
+        downloadLink.textContent = 'テンプレートをダウンロード';
+        downloadLink.setAttribute('download', 'game-template.zip');
+        buttonContainer.appendChild(downloadLink);
+      }
+
       if (game.icon) {
         const icon = document.createElement('img');
         icon.className = 'game-icon';

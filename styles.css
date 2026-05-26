@@ -114,6 +114,14 @@ main {
   border-radius: 999px;
 }
 
+.secondary-button {
+  background: #6b6bff;
+}
+
+.buttons a + a {
+  margin-left: 0.75rem;
+}
+
 .install-button {
   display: inline-block;
   background: #34c759;

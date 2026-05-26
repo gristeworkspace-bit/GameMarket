@@ -1,12 +1,13 @@
 {
   "games": [
     {
-      "id": "sample-game",
-      "title": "Sample Game",
-      "description": "PWA として公開するサンプルゲームです。ホーム画面に追加して遊べます。",
-      "pageUrl": "games/sample-game/index.html",
-      "icon": "games/sample-game/icon.svg",
-      "tags": ["サンプル", "PWA", "ゲーム"]
+      "id": "game-template",
+      "title": "Game Template",
+      "description": "ゲーム制作者向けの PWA テンプレートです。公開前の基本ファイルとダウンロードルールを含みます。",
+      "pageUrl": "games/game-template/index.html",
+      "downloadUrl": "downloads/game-template.zip",
+      "icon": "games/game-template/icon.svg",
+      "tags": ["テンプレート", "PWA", "制作向け"]
     },
     {
       "id": "tap-game",
