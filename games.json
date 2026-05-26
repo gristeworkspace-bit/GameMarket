@@ -26,6 +26,14 @@
       "tags": ["Unity", "WebGL", "テンプレート"]
     },
     {
+      "id": "ori-game",
+      "title": "OriGame",
+      "description": "Unity で作成した OriGame の WebGL ビルドです。",
+      "pageUrl": "games/unity-template/TranpleGameOriGame/index.html",
+      "icon": "games/unity-template/icon.svg",
+      "tags": ["Unity", "WebGL", "Game"]
+    },
+    {
       "id": "tap-game",
       "title": "Tap Game",
       "description": "丸をタップしてスコアを稼ぐシンプルゲームです。",
