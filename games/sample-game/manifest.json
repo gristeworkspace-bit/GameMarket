@@ -1,7 +1,7 @@
 {
   "name": "Sample Game",
   "short_name": "SampleGame",
-  "description": "GameMarket で配信する PWA サンプルゲームです。",
+  "description": "ぷわゲームズ で配信する PWA サンプルゲームです。",
   "start_url": "/games/sample-game/index.html",
   "display": "standalone",
   "background_color": "#ffffff",

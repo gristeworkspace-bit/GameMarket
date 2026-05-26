@@ -1,4 +1,4 @@
-GameMarket 用 PWA ゲームのルールテンプレート
+ぷわゲームズ用 PWA ゲームのルールテンプレート
 
 1. ゲームの名称、説明、遊び方を `index.html` と `manifest.json` に記載します。
 2. 画像やアイコンは `icon.svg` を差し替えます。

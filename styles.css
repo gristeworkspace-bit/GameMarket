@@ -17,7 +17,7 @@ header {
   max-width: 100vw;
   padding: 0;
   color: white;
-  background: url('siteimage/GameMarketHeader.png') no-repeat center center;
+  background: url('siteimage/PwaGames.png') no-repeat center center;
   background-size: contain;
   overflow: hidden;
 }
