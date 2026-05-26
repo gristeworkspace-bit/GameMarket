@@ -27,20 +27,25 @@ body.game-page header {
   color: #202124;
   aspect-ratio: auto;
   min-height: auto;
-  padding: 2rem 1.5rem;
+  padding: 0;
   display: block;
 }
 
-body.game-page header h1 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  margin-bottom: 0.5rem;
+.game-info {
+  margin-top: 1.75rem;
 }
 
-body.game-page header p {
+.game-info h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  color: #1f8efa;
+}
+
+.game-info p {
   margin: 0;
   color: #444;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .header-brand {
