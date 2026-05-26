@@ -11,13 +11,14 @@ body {
 
 header {
   position: relative;
-  min-height: 200px;
   width: 100%;
+  aspect-ratio: 16 / 5;
+  min-height: 160px;
   max-width: 100vw;
   padding: 0;
   color: white;
-  background: url('siteimage/GameMarketHeader.png') no-repeat center top;
-  background-size: cover;
+  background: url('siteimage/GameMarketHeader.png') no-repeat center center;
+  background-size: contain;
   overflow: hidden;
 }
 
